@@ -13,9 +13,8 @@ public class salarioMinimo {
 		System.out.println("Quanto é um salário mínimo?");
 		salarioMinimo = calcularSalario.nextDouble();
 		System.out.println("Qual é o seu salário atual?");
-		salarioUsuario = calcularSalario.nextDouble();
-		resultado = (int) (salarioUsuario/salarioMinimo);
-		System.out.println("Você recebe " + resultado + " salários mínimos.");
+		resultado = salarioUsuario/salarioMinimo;
+		System.out.printf("Você recebe %.2f salários mínimos.", resultado);
 
 	}
 
