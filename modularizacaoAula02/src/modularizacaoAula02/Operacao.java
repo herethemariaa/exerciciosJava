@@ -1,13 +1,13 @@
-package modularizacaoAula02;
+package modularização;
 
 import java.util.Scanner;
 
-public class Operacao {
+public class Modulo {
 
 	public static void main(String[] args) {
 		
 		Scanner teclado = new Scanner(System.in);
-		int number1, number2, solicitar;
+		int number1, number2, solicitar, resul;
 		
 		System.out.println("Deseja Somar ou Subtrair? (Responda apenas 1 para somar ou 2 para subtrair");
 		solicitar = teclado.nextInt();
@@ -17,29 +17,34 @@ public class Operacao {
 		number2 = teclado.nextInt();
 		
 	
-
-		
 		if (solicitar == 1) {
-			soma(number1, number2);
-		} if (solicitar == 2){
-			subtracao(number1, number2);
+			resul = soma(number1, number2);
+			System.out.println(resul);
+		} 
+		
+		if (solicitar == 2){
+			
+			resul = subtracao(number1, number2);
+			System.out.println(resul);
 		}
+		
+		
+		
 	}
-	public static void soma (int number1, int number2) {
+	
+	
+	public static int soma (int number1, int number2) {
 		int resultado;
 		
 		resultado = number1 + number2;
-		System.out.println(resultado);
+		return resultado;
 		
 	}
-	public static void subtracao (int number1, int number2) {
+	public static int subtracao (int number1, int number2) {
 		int resultado;
 		resultado = number1 - number2;
-		System.out.println(resultado);
+		return resultado;
 	}
+		
 
-}
-
-//  Solicite dois números ao usuário e apresente um menu com duas opções: somar e subtrair
-// somar: recebe dois números por parâmetro e mostra na tela o resultado da soma.
-// subtrair: recebe dois números por parâmetro e mostra na tela o resultado da subtração.
+	}
